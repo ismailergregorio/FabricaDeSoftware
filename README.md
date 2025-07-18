@@ -53,6 +53,19 @@ As próximas funcionalidades planejadas incluem:
 │   └── icons/
 └── README.md
 ```
+## IMPORTANTE para carregar JSON local
+O navegador bloqueia fetch('projetos.json') em arquivos locais (file://), por segurança.
+
+✅ Solução:
+Você precisa rodar um servidor local para funcionar. Exemplo:
+
+Se você tem o Python instalado:
+
+cd "pasta-do-seu-projeto"
+python -m http.server 8000
+Depois, acesse no navegador:
+
+http://localhost:8000
 
 ## 👨‍🎓 Público-Alvo
 

@@ -1,0 +1,32 @@
+[
+  {
+    "nome": "João Silva",
+    "cargo": "Desenvolvedor Full Stack",
+    "foto": "./img/pessoa1.jpeg"
+  },
+  {
+    "nome": "Maria Costa",
+    "cargo": "Gerente de Projetos",
+    "foto": "./img/pessoa2.png"
+  },
+  {
+    "nome": "Ana Luiza",
+    "cargo": "UX/UI Designer",
+    "foto": "./img/pessoa3.png"
+  },
+  {
+    "nome": "João Silva",
+    "cargo": "Desenvolvedor Full Stack",
+    "foto": "./img/pessoa1.jpeg"
+  },
+  {
+    "nome": "Maria Costa",
+    "cargo": "Gerente de Projetos",
+    "foto": "./img/pessoa2.png"
+  },
+  {
+    "nome": "Ana Luiza",
+    "cargo": "UX/UI Designer",
+    "foto": "./img/pessoa3.png"
+  }
+]

@@ -20,14 +20,21 @@ async function carregarProjetos() {
   const dados = await res.json();
   const container = document.getElementById('project-carousel');
   container.innerHTML = '';
+
   dados.forEach(p => {
-    container.innerHTML += `
-      <div class="carousel-card">
-        <h5>${p.titulo}</h5>
-        <p>${p.descricao}</p>
-      </div>`;
+    const card = document.createElement('div');
+    card.className = 'carousel-card card';
+    card.innerHTML = `
+      <img src="${p.imagem}" alt="${p.titulo}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px 8px 0 0;">
+      <div class="card-body">
+        <h5 class="card-title">${p.titulo}</h5>
+        <p class="card-text">${p.descricao}</p>
+      </div>
+    `;
+    container.appendChild(card);
   });
 }
+
 
 async function carregarEquipe() {
   const res = await fetch('equipe.json');

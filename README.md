@@ -9,78 +9,88 @@ Este projeto é um protótipo funcional do site da Fábrica de Software, desenvo
 
 ## 📌 Funcionalidades
 
-- 🔎 **Barra de navegação** com menu e campo de busca.
-- 🎠 **Carrossel de imagens** com ilustrações acadêmicas.
-- 👥 **Sessão "Quem Somos"** com cards de membros fictícios.
-- 💼 **Sessão de Projetos** com imagens e descrições de iniciativas.
-- 📱 **Design responsivo** para diferentes dispositivos.
-- 🔗 **Rodapé com links úteis** e informações de contato.
+- 🔎 **Barra de navegação** com menu, campo de busca e responsividade (Tailwind + Bootstrap).
+- 🎠 **Carrossel de imagens** dinâmico via `carrossel.json`.
+- 👥 **Sessão "Quem Somos"** com cards da equipe via `equipe.json`.
+- 💼 **Sessão de Projetos** com cards dinâmicos via `projetos.json`.
+- 🏭 **Sessão Sobre a Fábrica** (texto e imagem) carregada por `sobre.json`.
+- 📝 **Formulário de Cadastro** que envia dados como JSON via `POST`.
+- 📱 **Design responsivo** adaptado a diferentes dispositivos.
+- 🔗 **Rodapé com redes sociais e links úteis**.
 
 ## 🖼️ Capturas de Tela
 
-![Carrossel](./assets/img/carrossel1.png)
-![Cards dos Membros](./assets/img/membros1.png)
+![Carrossel](./assets/img/carrossel1.png)  
+![Cards dos Membros](./assets/img/membros1.png)  
 ![Projetos](./assets/img/projetos1.png)
 
-> As imagens utilizadas foram geradas com inteligência artificial para fins de ilustração.
+> As imagens são ilustrativas e geradas com inteligência artificial ou recursos livres.
 
 ## 🛠️ Tecnologias Utilizadas
 
 - HTML5
-- CSS3
-- JavaScript (básico)
-- Imagens em SVG e PNG
-- Layout responsivo (flexbox)
+- CSS3 + TailwindCSS + Bootstrap 5
+- JavaScript com `fetch`
+- JSON (estrutura de dados)
+- Python (para servidor local)
 
 ## 🧪 Em Desenvolvimento
 
-As próximas funcionalidades planejadas incluem:
-- Integração com banco de dados (Firebase ou MySQL).
-- Área de login e cadastro para novos membros.
-- Sistema de submissão de projetos.
-- Painel administrativo para professores e coordenadores.
+- 🔐 Área administrativa com login e painel de gerenciamento.
+- 💾 Integração com banco de dados (Firebase ou MySQL).
+- 🛠️ Sistema de submissão e edição de projetos/membros.
+- 📊 Painel de acompanhamento para professores.
 
 ## 📁 Estrutura de Pastas
 
 ```
 ├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-├── assets/
-│   ├── img/
-│   └── icons/
+├── cadastro.html
+├── Style.css
+├── Script.js
+├── cadastro.js
+├── projetos.json
+├── equipe.json
+├── sobre.json
+├── carrossel.json
+├── img/
+│   └── (imagens utilizadas no site)
 └── README.md
 ```
-## IMPORTANTE para carregar JSON local
-O navegador bloqueia fetch('projetos.json') em arquivos locais (file://), por segurança.
 
-✅ Solução:
-Você precisa rodar um servidor local para funcionar. Exemplo:
+## ⚠️ Como rodar localmente com JSON
 
-Se você tem o Python instalado:
+Navegadores não permitem `fetch()` de arquivos locais (`file://`) por segurança.
 
-cd "pasta-do-seu-projeto"
+### ✅ Solução:
+
+Se você tem Python instalado, execute:
+
+```bash
+cd "C:\Documents\GitHub\FabricaDeSoftware\Site da Fabrica"
 python -m http.server 8000
-Depois, acesse no navegador:
+```
 
-http://localhost:8000
+Acesse no navegador:  
+[http://localhost:8000](http://localhost:8000)
+
+Ou utilize o arquivo `iniciar-servidor.bat` para facilitar.
 
 ## 👨‍🎓 Público-Alvo
 
-- Estudantes da UniSales interessados em projetos práticos.
-- Professores que orientam TCCs ou iniciativas acadêmicas.
-- Comunidade externa que busca parcerias ou inspiração.
+- Estudantes da UniSales.
+- Professores e orientadores de projetos.
+- Empresas e comunidade interessadas em parcerias.
 
 ## 📬 Contato
 
-Para dúvidas ou sugestões, entre em contato:
-- 📧 fab.software@unisales.edu.br *(email fictício para fins de protótipo)*
-- 🌐 [Site oficial da UniSales](https://unisales.br)
+Para dúvidas ou sugestões:
+
+- 📧 fabricadesoftware@unisales.br *(email fictício)*
+- 🌐 [Site da UniSales](https://unisales.br)
 
 ---
 
 ## 📄 Licença
 
-Este projeto é de uso acadêmico e está sob a licença MIT. Sinta-se à vontade para estudar, reutilizar e contribuir.
+Este projeto é de uso acadêmico sob a licença MIT. Fique à vontade para reutilizar e contribuir!

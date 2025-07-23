@@ -9,18 +9,6 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-</head>
-
-<body>
-
-  <!-- Barra de Navegação -->
-  <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navbar UniSales</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white">
@@ -94,69 +82,27 @@
     });
   </script>
 
-</body>
-</html>
-
-
   <!-- Carrossel de Imagens -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
-    </div>
-    <div class="carousel-inner">
-
-      <!-- IMAGEM 1 -->
-      <div class="carousel-item active">
-        <img src="./img/cod.png" style="width: 500px; height: 700px;" class="d-block w-100" alt="Imagem 1">
-      </div>
-
-      <!-- IMAGEM 2 -->
-      <div class="carousel-item">
-        <img src="./img/Note.png" style="width: 500px; height: 700px;" class="d-block w-100" alt="Imagem 1">
-      </div>
-
-      <!-- IMAGEM 3 -->
-      <div class="carousel-item">
-        <img src="./img/Prog.png" style="width: 500px; height: 700px;" class="d-block w-100" alt="Imagem 1">
-      </div>
-
-    </div>
-
-    <!-- Botões de navegação do carrossel -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
+  <div class="carousel-indicators" id="carousel-indicators"></div>
+  <div class="carousel-inner" id="carousel-inner"></div>
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
   </div>
+
 
   <!-- Seção Sobre -->
-  <section id="sobre" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="mb-4">Sobre a Fábrica</h2>
-    <div class="row align-items-center">
-      
-      <!-- Coluna de texto -->
-      <div class="col-md-6">
-        <p>
-          A Fábrica de Software UniSales é um ambiente colaborativo onde alunos desenvolvem soluções reais para empresas e comunidades.
-          O projeto oferece uma experiência prática que complementa a formação acadêmica, conectando teoria e prática com foco na inovação.
-        </p>
-      </div>
-
-      <!-- Coluna de imagem -->
-      <div class="col-md-6">
-      
-        <img src="./img/dev.png" style="width: 400px; height: 300px; position:relative; left: 100px;" alt="Foto da Fábrica de Software UniSales" class="img-fluid rounded shadow">
-      </div>
-
-    </div>
+  
+<section id="sobre" class="py-5 bg-light">
+  <div class="container" id="sobre-container">
+    
   </div>
 </section>
-
 
   <!-- Seção Projetos -->
   <section id="projetos" style="background-color: #e4e3e3; padding: 50px 20px;">
@@ -186,18 +132,19 @@
       </div>
       <div class="cadastro-form">
         <h2>Crie Sua Conta</h2>
-        <form action="#" method="POST">
-          <input type="text" name="first_name" placeholder="Nome" required>
-          <input type="text" name="last_name" placeholder="Sobrenome" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="password" name="password" placeholder="Senha" required>
-          <input type="password" name="confirm_password" placeholder="Confirmar Senha" required>
+        <form id="cadastro-form">
+          <input type="text"  name="first_name"  placeholder="Nome"      required>
+          <input type="text"  name="last_name"   placeholder="Sobrenome" required>
+          <input type="email" name="email"       placeholder="Email"     required>
+          <input type="text"  name="periodo"     placeholder="Período"   required>
+          <input type="text"  name="matricula"   placeholder="Matrícula" required>
           <button type="submit" class="btn-register">Cadastrar</button>
         </form>
       </div>
     </div>
   </div>
 </section>
+
 
 
   <!-- Rodapé -->
@@ -240,20 +187,13 @@
   </div>
 </footer>
 
-<script>
-  function scrollCarousel(id, direction) {
-    const carousel = document.getElementById(id);
-    const scrollAmount = 300;
-    carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-  }
-</script>
+
 
 
 
   <!-- Bootstrap JS Bundle com Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="Script.js"></script>
-  
-
+  <script src="cadastro.js"></script>
 </body>
 </html>

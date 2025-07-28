@@ -101,7 +101,7 @@ async function carregarEquipe() {
       const div = document.createElement('div');
       div.className = 'carousel-card';
       div.innerHTML = `
-        <img src="${m.foto}" style="width:200px;height:200px;border-radius:8px;">
+        <img src="${m.foto}" style="width:100%;height:180px;object-fit:cover;border-radius:8px 8px 0 0;">
         <h3>${m.nome}</h3><p>${m.cargo}</p>`;
       cont.appendChild(div);
     });

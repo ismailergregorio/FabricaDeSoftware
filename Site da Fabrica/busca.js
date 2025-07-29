@@ -58,3 +58,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+// Carregar projeto pela URL (busca.html?q=...)
+const params = new URLSearchParams(window.location.search);
+const termoBusca = params.get('q');
+
+if (termoBusca) {
+  fetch('Projetos.json')
+    .then(res => res.json())
+    .then(projetos => {
+      const projeto = projetos.find(p =>
+        p.titulo.toLowerCase() === termoBusca.toLowerCase()
+      );
+
+      const resultado = document.getElementById('resultado-busca');
+      if (!resultado) return;
+
+      if (projeto) {
+        resultado.innerHTML = `
+          <h2 class="text-2xl font-bold mb-4">${projeto.titulo}</h2>
+          <img src="${projeto.imagem}" alt="${projeto.titulo}" class="mb-4" style="max-width: 600px;">
+          <p class="mb-2">${projeto.descricao}</p>
+          ${projeto.github ? `<p><strong>GitHub:</strong> <a href="${projeto.github}" target="_blank">${projeto.github}</a></p>` : ''}
+          ${projeto.video ? `<p><strong>Vídeo:</strong> <a href="${projeto.video}" target="_blank">${projeto.video}</a></p>` : ''}
+        `;
+      } else {
+        resultado.innerHTML = `<p class="text-red-500">Projeto "${termoBusca}" não encontrado.</p>`;
+      }
+    });
+}
+

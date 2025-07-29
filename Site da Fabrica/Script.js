@@ -73,22 +73,28 @@ async function carregarProjetos() {
     const dados = await res.json();
     const cont  = document.getElementById('project-carousel');
     cont.innerHTML = '';
+
     dados.forEach(p => {
       const card = document.createElement('div');
       card.className = 'carousel-card card';
       card.innerHTML = `
         <img src="${p.imagem}" alt="${p.titulo}"
              style="width:100%;height:180px;object-fit:cover;border-radius:8px 8px 0 0;">
-        <div class="card-body">
+        <div class="card-body text-center">
           <h5 class="card-title">${p.titulo}</h5>
           <p class="card-text">${p.descricao}</p>
-        </div>`;
+          <a href="busca.html?q=${encodeURIComponent(p.titulo)}" class="btn btn-primary mt-2">Saiba mais</a>
+        </div>
+      `; 
       cont.appendChild(card);
     });
-  } catch(e) {
+
+  } catch (e) {
     console.error('Erro carregarProjetos:', e);
   }
 }
+
+
 
 // 6) Carrega Equipe
 async function carregarEquipe() {

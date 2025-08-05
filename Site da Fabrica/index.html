@@ -1,114 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fábrica de Software - UniSales</title>
 
-  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="./css/Style.css">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-white">
 
   <!-- Navbar -->
   <nav class="bg-[#1A1F71] text-white px-4 py-3 shadow-md flex items-center justify-between">
-    <!-- Logo -->
     <div class="flex items-center space-x-4">
-    <a href="index.html"><img  src="./img/UniSales_logo_no_bg.png" alt="Logo UniSales" style="height: 100px;"></a>
+      <a href="index.html"><img src="./img/UniSales_logo_no_bg.png" alt="Logo UniSales" style="height: 100px;"></a>
+      <a href="index.html"><span class="text-xl font-bold">Fábrica de Software</span></a>
+    </div>
+   
 
-       <a href="index.html"><span class="text-xl font-bold">Fábrica de Software</span></a>
+
+    <div class="relative hidden md:flex flex-col items-start bg-white rounded-md px-2 py-1 text-black">
+      <div class="flex items-center w-full">
+        <input type="text" id="search-input" placeholder="Pesquisar projetos..."
+          class="outline-none bg-transparent px-2 py-1 w-64" />
+        <button id="search-button">
+          <svg class="h-5 w-5 text-[#1A1F71]" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M12.9 14.32a8 8 0 111.414-1.414l4.386 4.386a1 1 0 01-1.414 1.414l-4.386-4.386zM14 8a6 6 0 11-12 0 6 6 0 0112 0z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+      <div id="suggestions" class="absolute top-full left-0 bg-white text-black rounded shadow z-10 w-64 hidden"></div>
     </div>
 
-    <!-- Campo de Pesquisa -->
-<div  class="relative hidden md:flex flex-col items-start bg-white rounded-md px-2 py-1 text-black">
-  <div class="flex items-center w-full">
-    <input 
-      type="text"
-      id="search-input"
-      placeholder="Pesquisar projetos..."
-      class="outline-none bg-transparent px-2 py-1 w-64"
-    />
-    <button id="search-button" >
-      <svg class="h-5 w-5 text-[#1A1F71]" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd"
-          d="M12.9 14.32a8 8 0 111.414-1.414l4.386 4.386a1 1 0 01-1.414 1.414l-4.386-4.386zM14 8a6 6 0 11-12 0 6 6 0 0112 0z"
-          clip-rule="evenodd" />
-      </svg>
-    </button>
-  </div>
-  <!-- Sugestões aparecem aqui -->
-  <div id="suggestions" class="absolute top-full left-0 bg-white text-black rounded shadow z-10 w-64 hidden"></div>
-</div>
-
-
-    <!-- Menu -->
     <div class="hidden md:flex space-x-6 items-center">
       <a href="#sobre" class="hover:underline">Sobre a Fabrica</a>
       <a href="#projetos" class="hover:underline">Projetos</a>
       <a href="#contato" class="hover:underline">contato</a>
-      <a href="./cadastro.html" target="_blank" class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
-        Login 
-      </a>
+      <a href="./cadastro.html" target="_blank"
+        class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">Login</a>
     </div>
 
-    <!-- Botão Mobile -->
     <div class="md:hidden">
       <button id="menu-toggle" class="focus:outline-none">
         <svg class="h-6 w-6" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
   </nav>
 
-  <!-- Menu Mobile (inicialmente escondido) -->
   <div id="mobile-menu" class="md:hidden hidden bg-[#1A1F71] text-white px-4 py-4 space-y-2">
-    <input
-      type="text"
-      placeholder="Pesquisar..."
-      class="w-full px-3 py-2 rounded text-black"
-    />
+    <input type="text" placeholder="Pesquisar..." class="w-full px-3 py-2 rounded text-black" />
     <a href="#" class="block hover:underline">Cursos</a>
     <a href="#" class="block hover:underline">Diferenciais</a>
     <a href="#" class="block hover:underline">Como Ingressar</a>
-    <a href="#" class="block bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded mt-2 text-center">
-      Inscreva-se
-    </a>
+    <a href="#"
+      class="block bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded mt-2 text-center">Inscreva-se</a>
   </div>
 
   <script>
-    // Mobile menu toggle
     document.getElementById('menu-toggle').addEventListener('click', () => {
       const menu = document.getElementById('mobile-menu');
       menu.classList.toggle('hidden');
     });
   </script>
 
-  <!-- Carrossel de Imagens -->
+  <!-- Carrossel -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators" id="carousel-indicators"></div>
-  <div class="carousel-inner" id="carousel-inner"></div>
-  
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
+    <div class="carousel-indicators" id="carousel-indicators"></div>
+    <div class="carousel-inner" id="carousel-inner"></div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
   </div>
-
 
   <!-- Seção Sobre -->
-  
-<section id="sobre" class="py-5 bg-light">
-  <div class="container" id="sobre-container">
-    
-  </div>
-</section>
+  <section id="sobre" class="py-5 bg-light">
+    <div class="container" id="sobre-container"></div>
+  </section>
 
   <!-- Seção Projetos -->
   <section id="projetos" style="background-color: #e4e3e3; padding: 50px 20px;">
@@ -118,89 +99,90 @@
     </div>
   </section>
 
- 
- <!-- Seção de Quem Somos -->
-   <section id="quem-somos" style="background-color: #e4e3e3; padding: 50px 20px; flex-direction: column; align-items: center; justify-content: center;text-align: center; padding: 20px;" >
-    <h2 style="background-color: #e4e3e3; padding: 50px 20px; font-size: 32px; margin-bottom: 20px; max-width: 1200px; margin: auto; text-align: center;">Quem Somos</h2>
+  <!-- Seção Quem Somos -->
+  <section id="quem-somos"
+    style="background-color: #e4e3e3; padding: 50px 20px; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+    <h2 style="font-size: 32px; margin-bottom: 20px; max-width: 1200px; margin: auto; text-align: center;">Quem Somos
+    </h2>
     <div class="carousel">
       <div class="carousel-track" id="team-carousel"></div>
     </div>
   </section>
 
-  
-
-<!-- Seção de Cadastro -->
-<section class="cadastro">
-  <div class="container">
-    <div class="cadastro-content">
-      <div class="cadastro-image">
-        <img src="./img/Cadastro.png" alt="Ilustração Cadastro" style="width: 1500px;">
-      </div>
-      <div class="cadastro-form">
-        <h2>Crie Sua Conta</h2>
-        <form id="cadastro-form">
-          <input type="text"  name="first_name"  placeholder="Nome"      required>
-          <input type="text"  name="last_name"   placeholder="Sobrenome" required>
-          <input type="email" name="email"       placeholder="Email"     required>
-          <input type="text"  name="periodo"     placeholder="Período"   required>
-          <input type="text"  name="matricula"   placeholder="Matrícula" required>
-          <button type="submit" class="btn-register">Cadastrar</button>
-        </form>
+  <!-- Seção Cadastro -->
+  <section class="cadastro">
+    <div class="container">
+      <div class="cadastro-content">
+        <div class="cadastro-image">
+          <img src="./img/Cadastro.png" alt="Ilustração Cadastro" style="width: 1500px;">
+        </div>
+        <div class="cadastro-form">
+          <h2>Crie Sua Conta</h2>
+          <form id="cadastro-form">
+            <input type="text" name="first_name" placeholder="Nome" required>
+            <input type="text" name="last_name" placeholder="Sobrenome" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="periodo" placeholder="Período" required>
+            <input type="text" name="matricula" placeholder="Matrícula" required>
+            <button type="submit" class="btn-register">Cadastrar</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- Rodapé -->
   <footer class="bg-gray-900 text-white py-10">
-  <div id="contato" class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-    <!-- Logo e redes sociais -->
-    <div>
-      <p class="font-semibold text-lg mb-4">© 2025 Fábrica de Software UniSales</p>
-      <div class="flex space-x-4">
-        <a href="https://www.instagram.com/unisalesoficial/" ><img src="./img/instagram.png" class="h-6 w-6" alt="Instagram"></a>
-        <a href="https://www.youtube.com/c/UniSalesOficial" target="_blank"><img src="./img/youtube.png" class="h-6 w-6" alt="youtube"></a>
-        <a href="https://x.com/unisalesoficial" target="_blank"><img src="./img/twitter-x.svg" class="h-6 w-6" alt="twitter"></a>
-        <a href="https://unisales.br/" target="_blank"><img src="./img/Logo unisales.png"  class="h-6 w-6" alt="site"></a>
+    <div id="contato" class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <p class="font-semibold text-lg mb-4">© 2025 Fábrica de Software UniSales</p>
+        <div class="flex space-x-4">
+          <a href="https://www.instagram.com/unisalesoficial/"><img src="./img/instagram.png" class="h-6 w-6"
+              alt="Instagram"></a>
+          <a href="https://www.youtube.com/c/UniSalesOficial" target="_blank"><img src="./img/youtube.png"
+              class="h-6 w-6" alt="youtube"></a>
+          <a href="https://x.com/unisalesoficial" target="_blank"><img src="./img/twitter-x.svg" class="h-6 w-6"
+              alt="twitter"></a>
+          <a href="https://unisales.br/" target="_blank"><img src="./img/Logo unisales.png" class="h-6 w-6"
+              alt="site"></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-2">Contato</h4>
+        <p>Email: fabricadesoftware@unisales.br</p>
+        <p>Endereço: Av. Vitória, 1234 - Vitória, ES</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-2">Institucional</h4>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:underline">Sobre</a></li>
+          <li><a href="#" class="hover:underline">Projetos</a></li>
+          <li><a href="#" class="hover:underline">Equipe</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-2">Receba atualizações</h4>
+        <input type="email" placeholder="Seu email" class="p-2 rounded text-black w-full mb-2">
+        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded w-full">Enviar</button>
       </div>
     </div>
+  </footer>
 
-    <!-- Contato -->
-    <div>
-      <h4 class="font-semibold mb-2">Contato</h4>
-      <p>Email: fabricadesoftware@unisales.br</p>
-      <p>Endereço: Av. Vitória, 1234 - Vitória, ES</p>
-    </div>
-
-    <!-- Links institucionais  -->
-    <div>
-      <h4 class="font-semibold mb-2">Institucional</h4>
-      <ul class="space-y-1">
-        <li><a href="#" class="hover:underline">Sobre</a></li>
-        <li><a href="#" class="hover:underline">Projetos</a></li>
-        <li><a href="#" class="hover:underline">Equipe</a></li>
-      </ul>
-    </div>
-
-    <!-- Newsletter (opcional) -->
-    <div>
-      <h4 class="font-semibold mb-2">Receba atualizações</h4>
-      <input type="email" placeholder="Seu email" class="p-2 rounded text-black w-full mb-2">
-      <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded w-full">Enviar</button>
-    </div>
-  </div>
-</footer>
-
-
-
-
-
-  <!-- Bootstrap JS Bundle com Popper -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="Script.js"></script>
-  <script src="cadastro.js"></script>
-  <script src="busca.js"></script>
+  <script type="module" src="./js/search.js"></script>
+  <script type="module" src="./js/carousel.js"></script>
+  <script type="module" src="./js/sobre.js"></script>
+  <script type="module" src="./js/projetos.js"></script>
+  <script type="module" src="./js/equipe.js"></script>
+  <script type="module" src="./js/search.js"></script>
+  <script type="module" src="./js/main.js"></script>
+
+
+
 </body>
+
 </html>

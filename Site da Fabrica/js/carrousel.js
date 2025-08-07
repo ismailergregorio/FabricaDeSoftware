@@ -1,7 +1,9 @@
 export async function carregarCarrossel() {
   try {
-    const res = await fetch("http://localhost:8080/carrossel");
+    const res = await fetch("http://localhost:8080/carrosel/carrosel_imagens");
     const slides = await res.json();
+
+    console.log(res);
 
     const indicators = document.getElementById("carousel-indicators");
     const inner = document.getElementById("carousel-inner");
@@ -20,7 +22,7 @@ export async function carregarCarrossel() {
       const slide = document.createElement("div");
       slide.className = "carousel-item" + (index === 0 ? " active" : "");
       slide.innerHTML = `
-        <img src="${item.imagem}" class="d-block w-100" alt="${item.alt}" style="height: 700px; object-fit: cover;">
+        <img src="${item.linkImagenCarrocel}" class="d-block w-100" alt="${item.alt}" style="height: 700px; object-fit: cover;">
       `;
       inner.appendChild(slide);
     });

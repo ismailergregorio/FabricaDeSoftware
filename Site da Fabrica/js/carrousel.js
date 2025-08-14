@@ -1,6 +1,6 @@
 export async function carregarCarrossel() {
   try {
-    const res = await fetch("http://localhost:8080/carrosel/carrosel_imagens");
+    const res = await fetch("http://localhost:8080/carrocel/carrocel_imagens");
     const slides = await res.json();
 
     console.log(res);

@@ -14,7 +14,7 @@ export async function carregarProjetos() {
              style="width:100%;height:180px;object-fit:cover;border-radius:8px 8px 0 0;">
         <div class="card-body text-center">
           <h5 class="card-title">${p.nomeDoProjeto}</h5>
-          <p class="card-text">${p.descricaoDoProjeto}</p>
+         
           <a href="busca.html?q=${encodeURIComponent(p.nomeDoProjeto)}" class="btn btn-primary mt-2">Saiba mais</a>
         </div>
       `;

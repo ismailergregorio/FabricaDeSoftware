@@ -59,7 +59,7 @@
       const searchButton = document.getElementById('search-button');
       let projetos = [];
 
-      fetch('Projetos.json')
+      fetch('http://localhost:8080/projetos/getprojetos')
         .then(res => res.json())
         .then(data => {
           projetos = data;

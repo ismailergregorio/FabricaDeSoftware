@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let projetos = [];
 
-  fetch('Projetos.json')
+  fetch('http://localhost:8080/projetos/getprojetos')
     .then(res => res.json())
     .then(data => {
       projetos = data;
@@ -63,7 +63,7 @@ const params = new URLSearchParams(window.location.search);
 const termoBusca = params.get('q');
 
 if (termoBusca) {
-  fetch('Projetos.json')
+  fetch('http://localhost:8080/projetos/getprojetos')
     .then(res => res.json())
     .then(projetos => {
       const projeto = projetos.find(p =>

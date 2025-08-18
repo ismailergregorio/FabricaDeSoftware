@@ -1,6 +1,6 @@
 export async function carregarEquipe() {
   try {
-    const res = await fetch("http://localhost:8080/alunos/alunos");
+    const res = await fetch("http://localhost:8080/gestores/gestores");
     const dados = await res.json();
     const cont = document.getElementById("team-carousel");
     cont.innerHTML = "";
@@ -9,9 +9,9 @@ export async function carregarEquipe() {
       const div = document.createElement("div");
       div.className = "carousel-card";
       div.innerHTML = `
-        <img src="${m.foto || './img/default.jpg'}" alt="${m.nome}"
+        <img src="${m.foto || './img/default.jpg'}" alt="${m.name}"
              style="width:100%;height:180px;object-fit:cover;border-radius:8px 8px 0 0;">
-        <h3>${m.nome}</h3><p>${m.curso}</p>
+        <h3>${m.name}</h3><p>${m.descriçao}</p>
       `;
       cont.appendChild(div);
     });

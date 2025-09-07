@@ -28,7 +28,7 @@ export async function carregarSobre() {
     });
     
     container.innerHTML = `
-      <h2 class="mb-4">${codigo_titulo}</h2>
+      <h2 class="mb-4">${codigo_titulo} "</h2>
       <div class="row align-items-center">
         <div class="col-md-6"><p>${codigo_descricao}</p></div>
         <div class="col-md-6 text-center">

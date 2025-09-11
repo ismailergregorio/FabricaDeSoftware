@@ -1,4 +1,4 @@
-import { carregarCarrossel } from './carrousel.js';
+import { carregarCarrossel } from "./carrousel.js";
 import { carregarSobre } from './sobre.js';
 import { carregarProjetos } from './projetos.js';
 import { carregarEquipe } from './equipe.js';
@@ -24,5 +24,6 @@ window.onload = () => {
   carregarEquipe();
   autoScrollCarousel("project-carousel");
   autoScrollCarousel("team-carousel");
-  inicializarBusca('input-busca', 'lista-sugestoes');
+  // Corrigido: IDs de busca agora batem com o HTML
+  inicializarBusca('search-input', 'suggestions');
 };

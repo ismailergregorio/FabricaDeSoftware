@@ -1,96 +1,91 @@
-
 # 🏭 Fábrica de Software - UniSales
 
 Bem-vindo ao repositório do site da **Fábrica de Software da UniSales**, uma iniciativa acadêmica que promove o desenvolvimento de soluções digitais por estudantes dos cursos de tecnologia.
 
 ## 🚀 Visão Geral
 
-Este projeto é um protótipo funcional do site da Fábrica de Software, desenvolvido com foco em usabilidade, identidade visual da instituição e incentivo à participação de novos alunos.
+Este projeto é um **protótipo funcional** do site da Fábrica de Software, desenvolvido com foco em:
+
+- Usabilidade e responsividade.
+- Identidade visual alinhada à UniSales.
+- Incentivo à participação de novos alunos e visibilidade dos projetos.
 
 ## 📌 Funcionalidades
 
-- 🔎 **Barra de navegação** com menu, campo de busca e responsividade (Tailwind + Bootstrap).
-- 🎠 **Carrossel de imagens** dinâmico via `carrossel.json`.
-- 👥 **Sessão "Quem Somos"** com cards da equipe via `equipe.json`.
-- 💼 **Sessão de Projetos** com cards dinâmicos via `projetos.json`.
-- 🏭 **Sessão Sobre a Fábrica** (texto e imagem) carregada por `sobre.json`.
-- 📝 **Formulário de Cadastro** que envia dados como JSON via `POST`.
-- 📱 **Design responsivo** adaptado a diferentes dispositivos.
-- 🔗 **Rodapé com redes sociais e links úteis**.
+- 🔎 **Barra de navegação** com campo de pesquisa integrado à API.
+- 🎠 **Carrossel de imagens** dinâmico carregado via Spring Boot API.
+- 💼 **Sessão de Projetos** com cards dinâmicos (imagem, descrição e link para GitHub).
+- 👥 **Sessão "Quem Somos"** com carrossel de membros fictícios da equipe.
+- 🏭 **Sessão "Sobre a Fábrica"** (texto + imagem institucional).
+- 📝 **Formulário de Cadastro** integrado para novos participantes.
+- 📱 **Design responsivo** adaptado para desktop e mobile.
+- 🔗 **Rodapé personalizado** com links institucionais e redes sociais.
 
 ## 🖼️ Capturas de Tela
 
-![Carrossel](./assets/img/carrossel1.png)  
-![Cards dos Membros](./assets/img/membros1.png)  
-![Projetos](./assets/img/projetos1.png)
-
-> As imagens são ilustrativas e geradas com inteligência artificial ou recursos livres.
+*(adicione prints reais do site rodando)*  
+- Carrossel inicial  
+- Sessão de Projetos  
+- Sessão de Membros  
 
 ## 🛠️ Tecnologias Utilizadas
 
-- HTML5
-- CSS3 + TailwindCSS + Bootstrap 5
-- JavaScript com `fetch`
-- JSON (estrutura de dados)
-- Python (para servidor local)
-
-## 🧪 Em Desenvolvimento
-
-- 🔐 Área administrativa com login e painel de gerenciamento.
-- 💾 Integração com banco de dados (Firebase ou MySQL).
-- 🛠️ Sistema de submissão e edição de projetos/membros.
-- 📊 Painel de acompanhamento para professores.
+- **Frontend**: HTML5, CSS3, Bootstrap 5, JavaScript (modularizado).
+- **Backend/API**: Spring Boot (Java).
+- **Banco de Dados**: PostgreSQL (armazenando projetos, membros, imagens).
+- **Ferramentas**: Fetch API para consumo do backend.
 
 ## 📁 Estrutura de Pastas
 
-```
-├── index.html
-├── cadastro.html
-├── Style.css
-├── Script.js
-├── cadastro.js
-├── projetos.json
-├── equipe.json
-├── sobre.json
-├── carrossel.json
-├── img/
-│   └── (imagens utilizadas no site)
-└── README.md
-```
+    Site da Fabrica/
+    ├── css/
+    │ ├── Style.css
+    │ └── img/ # imagens utilizadas
+    ├── js/
+    │ ├── busca.js # lógica da barra de pesquisa
+    │ ├── cadastro.js # lógica do formulário de cadastro
+    │ ├── cards.js # renderização de cards genéricos
+    │ ├── carrousel.js # carrossel dinâmico via API
+    │ ├── equipe.js # membros da fábrica
+    │ ├── main.js # ponto central para inicialização
+    │ ├── projetos.js # cards de projetos
+    │ ├── search.js # autocomplete de pesquisa
+    │ ├── sobre.js # seção "Sobre a Fábrica"
+    │ └── Script.js # funções auxiliares
+    ├── busca.html # página de resultados da busca
+    ├── index.html # página inicial
+    ├── Iniciar.bat # script para rodar localmente
+    └── README.md
 
-## ⚠️ Como rodar localmente com JSON
+## ⚙️ Como Rodar Localmente
 
-Navegadores não permitem `fetch()` de arquivos locais (`file://`) por segurança.
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/MapaInterativohub/MapaInterativo
 
-### ✅ Solução:
+2. Certifique-se de que o backend (Spring Boot) esteja rodando em:
+    http://localhost:8080
 
-Se você tem Python instalado, execute:
+3. Abra o index.html no navegador ou use um servidor local:
+    cd "Site da Fabrica"
+    python -m http.server 8000
 
-```bash
-cd "C:\Documents\GitHub\FabricaDeSoftware\Site da Fabrica"
-python -m http.server 8000
-```
+👨‍🎓 Público-Alvo
 
-Acesse no navegador:  
-[http://localhost:8000](http://localhost:8000)
+Estudantes da UniSales.
 
-Ou utilize o arquivo `iniciar-servidor.bat` para facilitar.
+Professores/orientadores de projetos.
 
-## 👨‍🎓 Público-Alvo
+Comunidade externa e empresas interessadas em parcerias.
 
-- Estudantes da UniSales.
-- Professores e orientadores de projetos.
-- Empresas e comunidade interessadas em parcerias.
+📬 Contato
 
-## 📬 Contato
+📧 fabricadesoftware@unisales.br
+ (email fictício)
 
-Para dúvidas ou sugestões:
+🌐 Site da UniSales
 
-- 📧 fabricadesoftware@unisales.br *(email fictício)*
-- 🌐 [Site da UniSales](https://unisales.br)
-
----
-
-## 📄 Licença
+📄 Licença
 
 Este projeto é de uso acadêmico sob a licença MIT. Fique à vontade para reutilizar e contribuir!
+

@@ -14,21 +14,21 @@ export async function carregarSobre() {
       if (config.codigoDaConfguracao === "CONF2883") {
         codigo_titulo = config.valorSalvo
       }
-      if (config.codigoDaConfguracao == "CONF3212") {
+      if (config.codigoDaConfguracao == "CONF4868") {
         codigo_descricao = config.valorSalvo
       }
-      if (config.codigoDaConfguracao == "CONF1181") {
+      if (config.codigoDaConfguracao == "CONF6714") {
         codigo_imagem = config.valorSalvo
         console.log(codigo_imagem);
 
       }
-      if (config.codigoDaConfguracao == "CONF1181") {
+      if (config.codigoDaConfguracao == "CONF6714") {
         codigo_alt = config.nomeConfig
       }
     });
     
     container.innerHTML = `
-      <h2 class="mb-4">${codigo_titulo} "</h2>
+      <h2 class="mb-4">Fábrica de Software – Projeto Acadêmico </h2>
       <div class="row align-items-center">
         <div class="col-md-6"><p>${codigo_descricao}</p></div>
         <div class="col-md-6 text-center">

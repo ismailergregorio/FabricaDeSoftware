@@ -138,3 +138,26 @@ body {
 .carousel-track::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+
+/* Ajusta a caixa de sugestões da busca */
+#suggestions {
+  position: absolute;
+  top: 100%;        /* Fica logo abaixo do input */
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 1050;    /* Mais alto que navbar e carrossel */
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+  max-height: 250px;
+  overflow-y: auto; /* Permite scroll se tiver muitas opções */
+}
+
+#suggestions div {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#suggestions div:hover {
+  background-color: #f1f1f1;
+}

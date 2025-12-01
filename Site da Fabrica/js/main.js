@@ -2,7 +2,7 @@ import { carregarCarrossel } from './carrousel.js';
 import { carregarSobre } from './sobre.js';
 import { carregarProjetos } from './projetos.js';
 import { carregarEquipe } from './equipe.js';
-import { inicializarBusca } from './search.js';
+
 
 function autoScrollCarousel(id) {
   const carousel = document.getElementById(id);
@@ -24,5 +24,5 @@ window.onload = () => {
   carregarEquipe();
   autoScrollCarousel("project-carousel");
   autoScrollCarousel("team-carousel");
-  inicializarBusca('input-busca', 'lista-sugestoes');
+  
 };

@@ -1,0 +1,12 @@
+.head-alunos {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+

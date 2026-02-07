@@ -1,0 +1,286 @@
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+label {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="date"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #399bf7;
+  /* Cor da borda ao focar */
+  box-shadow: 0 0 5px #399bf7;
+  /* Efeito brilhante ao redor */
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid #399bf7;
+  /* Cor da borda ao focar */
+  box-shadow: 0 0 5px #399bf7;
+  /* Efeito brilhante ao redor */
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.duplo {
+  display: flex;
+  gap: 10px;
+}
+
+.duplo>div {
+  flex: 1;
+}
+
+.Select {
+  height: 60px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.Select img {
+  height: 60px;
+  border-radius: 10px;
+}
+
+.Select label input {
+  position: relative;
+  bottom: 40px;
+  left: -20px;
+}
+
+.imgSelect {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* STILO INPUT MULTIPLOS ITENS */
+.addMais {
+  display: flex;
+  flex-direction: column;
+}
+
+.textBtnAdicionar {
+  display: flex;
+  align-items: center;
+}
+
+.textBtnAdicionar h2 {
+  padding-right: 5px;
+}
+
+.textBtnAdicionar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+  width: 1rem;
+  margin: 2px;
+}
+
+.topco {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.listaItens {
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+  /* altura semelhante à imagem */
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #cecece;
+  font-size: 0.6rem;
+  line-height: 1.5;
+  color: #000;
+  box-sizing: border-box;
+
+  /* comportamento visual */
+  cursor: text;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.listaItensSelecionados {
+  display: flex;
+  width: 100%;
+  min-height: 35px;
+  /* altura semelhante à imagem */
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  background-color: #fff;
+  font-size: 0.6rem;
+  line-height: 1.5;
+  color: #000;
+  box-sizing: border-box;
+
+  /* comportamento visual */
+  cursor: text;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #45a049;
+  padding: 2px 8px;
+  width: 30%;
+  border-radius: 5px;
+  font-size: 0.4rem;
+
+}
+
+.itenSelecionado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #8f8f8f;
+  padding: 5px;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.item-desativado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #da6363;
+  padding: 2px;
+  width: 30%;
+  border-radius: 5px;
+  font-size: 0.4rem;
+}
+
+.txt {
+  display: flex;
+  font-size: 0.4rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.txt h2 {
+  font-size: 0.7rem;
+}
+
+.itens i {
+  padding-left: 10px;
+}
+
+/* stilo itens dentro do imput */
+.inputsLista {
+  /* background: #45a049; */
+  border-radius: 5px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-height: 35px;
+}
+
+.itensAdicionado:hover {
+  background: #c8c8c8;
+}
+
+.itensAdicionado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  margin: 5px 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background: #c7c7c7;
+}
+
+.itensAdicionado h2 {
+  font-size: 0.6rem;
+}
+
+.itensAdicionado button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+}
+
+#btnSalvarAlteraProjeto {
+  margin-bottom: 2px;
+}
+
+#btnDeleteProjeto {
+  background: #e24d4d;
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .content {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+  }
+}
+
+@media(max-width: 480px) {
+  .content {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+  }
+}

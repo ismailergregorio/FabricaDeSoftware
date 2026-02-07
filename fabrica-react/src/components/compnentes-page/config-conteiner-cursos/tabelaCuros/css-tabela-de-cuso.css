@@ -1,0 +1,83 @@
+.tabelaCursos{
+ padding: 10px;
+ background: #dbdbdb;
+ border-radius: 10px;
+ margin-left: 2.5px;
+}
+.haderCursos{
+ display: flex;
+ justify-content: space-between;
+ padding-bottom: 5px;
+}
+.haderCursos h1{
+ font-size: .8rem;
+}
+.haderCursos button{
+ display: flex;
+ width: 80px;
+ height: 20px;
+ font-size: 0.8rem;
+ justify-content: center;
+ align-items: center;
+}
+.ContentCursos{
+ max-height: 290px;
+ flex-wrap: wrap;
+ overflow-y: auto;
+}
+.textCurso{
+ display: flex;
+}
+.textCurso h1{
+
+ font-size: .7rem;
+}
+.curso{
+ display: flex;
+ justify-content: space-between;
+ background-color: aliceblue;
+ align-items: center;
+ padding: 5px;
+ margin-top: 5px;
+ border-radius: 10px;
+
+}
+.curso button{
+ display: flex;
+ width: 80px;
+ height: 20px;
+ font-size: 0.8rem;
+ justify-content: center;
+ align-items: center;
+}
+
+.fomularioEnviodeCurso{
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    height: 70px;
+    
+}
+#fomularioDeEnviodeCurso{
+    display: none;
+}
+
+.imputC label{
+    font-size: .6rem;
+}
+.imputC label input{
+    height: 30px;
+    margin: 0px;
+}
+
+.btnEnvio button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 50px;
+    font-size: .6rem;
+}
+#formularioEnvio{
+    height: 10px;
+}

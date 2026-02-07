@@ -1,0 +1,147 @@
+.BtnFormate_1{
+  font-size: 1em;
+  width: 100px;
+  height: 40px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+#ListaProjetosJestores{
+  display: none;
+}
+.content{
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+
+}
+label{
+  font-size: 0.8rem;
+  color: black;
+}
+#h2_titulo_formulario{
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+.conteinerSelect {
+  display: flex;
+  background: rebeccapurple;
+  padding: 10px;
+}
+.listaDeItens{
+  display: flex;
+  flex-wrap: wrap;
+  background: #b9b9b9;
+  padding-top: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.btnSelector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  height: 30px;
+  width: calc(33.333% - 5px);
+
+}
+
+.btnSelector h1 {
+  font-size: 0.6rem;
+}
+
+.Selecionados{
+  display: flex;
+  padding: 10px;
+  background: green;
+  min-height: 30px;
+  flex-wrap: wrap;
+  
+}
+.inputsLista{
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.select {
+  display: flex;
+  align-items: center;
+  background: rgb(173, 173, 173);
+  border-radius: 5px;
+  padding: 0px 3px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  width: calc(30% - 5px);
+
+}
+.select button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  font-size: 0.5rem;
+}
+
+.TextSelect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+  width: 90%;
+}
+
+.TextSelect h1 {
+  font-size: 0.7rem;
+}
+.img_Gestor{
+  height: 100px;
+  width: 150px;
+  border-radius: 5px;
+}
+#btn_itens{
+  margin: 3px 0px;
+  height: 5px;
+  width: 5px;
+
+}
+
+#btnDeletarGestor{
+  /* margin-top: 5px; */
+  background: #e24d4d;
+}
+#btnGestor{
+  margin-bottom: 3px;
+}
+.addMaisG{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .content {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+  }
+}
+
+@media(max-width: 480px) {
+  .content {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+  }
+}

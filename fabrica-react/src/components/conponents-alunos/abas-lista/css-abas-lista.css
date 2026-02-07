@@ -1,0 +1,70 @@
+.heder-tabela-aba{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    justify-content: space-between;
+    width: 100%;
+}
+.aba{
+    display: flex;
+    padding-left: 10px;
+}
+.abas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.4rem;
+    background-color: #eeeeee;
+    padding: 5px;
+    padding-left: 15px;
+    border-radius: 10px 10px 0px 0px;
+    min-width: 120px;
+    margin-right: 2px;
+    color: #1f1f1f;
+}
+
+
+.label-adcionar-alunos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    margin-right: 20px;
+    font-size: .8rem;
+    padding: 0px 5px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+}
+.label-adcionar-alunos i {
+    padding-right: 10px;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+.label-adcionar-alunos:hover{
+    background-color: rgb(224, 224, 224);
+}
+.label-adcionar-alunos i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;
+}
+#Ativo{
+    background-color: rgb(170, 170, 170);
+    color: #5e5e5e;
+}
+#Ativo:hover{
+    background-color: rgb(182, 182, 182);
+}
+#txt2 {
+    padding-right: 10px;
+}
+.txt{
+    font-size: 0.6rem;
+}

@@ -1,0 +1,61 @@
+.listaAlunos{
+ background: #e7e7e7;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ width: 100%;
+}
+.listaAlunos h1{
+ padding: 5px;
+ font-family: 'Roboto', sans-serif;
+ font-size: 0.9rem;
+ text-align: left;
+ font-weight: bold;
+}
+.alunos {
+ background-color: #fff;
+ padding: 10px 15px;
+ border-radius: 8px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+ margin-bottom: 8px;
+ font-family: Arial, sans-serif;
+ margin: 5px;
+}
+
+.info-aluno {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-size: 0.8rem;
+ color: #333;
+}
+
+.info-aluno i {
+ color: #007bff;
+ margin-right: 6px;
+}
+
+.acoes {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+}
+
+.ra {
+ font-weight: bold;
+ color: #666;
+}
+
+.acoes button {
+ padding: 4px 10px;
+ font-size: 14px;
+ border: none;
+ background-color: #007bff;
+ color: white;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: background 0.2s ease;
+}
+
+.acoes button:hover {
+ background-color: #0056b3;
+}

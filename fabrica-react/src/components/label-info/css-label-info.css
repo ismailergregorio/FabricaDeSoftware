@@ -1,0 +1,25 @@
+.label-info{
+    display: flex;
+    /* background: whitesmoke; */
+    align-items: center;
+    justify-content: left;
+    font-family: 'Roboto', sans-serif;
+}
+.label{
+    background: rgb(216, 216, 216);
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.label a{
+    font-size: 1rem;
+}
+.label i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 10px;
+}

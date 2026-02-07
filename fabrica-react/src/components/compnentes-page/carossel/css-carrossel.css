@@ -1,0 +1,173 @@
+.heder-carrossel {
+  display: flex;
+  color: #34495e;
+  font-size: 0.7rem;
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 10px;
+}
+
+.heder-carrossel h2 {
+  padding-left: 10px;
+}
+
+.form-carrosel {
+  position: absolute;
+}
+
+#btn-salvar:disabled,
+.btn-atualizar-txt:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.quantidade-imagem-carrossel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  padding-right: 10px;
+  /* padding: 10px; */
+}
+
+.quantidade-imagem-carrossel input {
+  /* height: 32px; */
+  padding: 2px 5px;
+  margin: 0;
+  margin-left: 5px;
+  width: 45px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-family: "Roboto", sans-serif;
+}
+
+/* #quantidadeIMG{
+  padding: 2px 5px;
+  margin: 0;
+  margin-left: 5px;
+  height: 25px;
+  width: 40px;
+} */
+
+.carrossel {
+  width: 100%;
+  max-width: 70em;
+  justify-items: left;
+  /* margin: 20px auto; */
+  /* padding: 10px; */
+  font-family: "Roboto", sans-serif;
+}
+
+swiper-slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+}
+
+.BtnImagem {
+  font-size: 1em;
+  width: 100px;
+  height: 40px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.BtnImagem:hover {
+  background-color: #1c5980;
+}
+
+.btnAtulisarCarroselEforlario {
+  display: flex;
+  position: absolute;
+  top: 225px;
+  left: 10px;
+}
+
+/* Customisação aba de atulização de imagens de carrossel */
+.FormAtulizarImgemCarrosel {
+  display: none;
+  align-items: end;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.FormAtulizarImgemCarrosel input {
+  height: 10px;
+  margin: 0px;
+}
+
+.FormAtulizarImgemCarrosel label {
+  font-size: 0.6rem;
+  margin: 0;
+  padding-bottom: 2.5px;
+}
+
+.FormAtulizarImgemCarrosel button {
+  margin-left: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 20px;
+  font-size: 0.6rem;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.Input_Carrosel_Formulario {
+  padding-bottom: 2.5px;
+}
+
+.CarrocelSemImagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.CarrocelSemImagen button {
+  width: 250px;
+  margin-bottom: 25px;
+}
+
+.CarrocelSemImagen form {
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  background: whitesmoke;
+  padding: 5px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.CarrocelSemImagen form input {
+  margin: 0px;
+}
+
+.CarrocelSemImagen form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0px 0px 0px;
+  width: 100px;
+  height: 30px;
+}

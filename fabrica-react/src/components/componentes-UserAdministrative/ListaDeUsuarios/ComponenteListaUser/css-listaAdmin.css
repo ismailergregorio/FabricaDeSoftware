@@ -1,0 +1,56 @@
+.ListaItensUser {
+  display: flex;
+  flex-direction: column;
+  background: rgb(235, 235, 235);
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.legendasUser {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.4rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.itensUser {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.5rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+.itensUser h1{
+ width: calc(100%/3);
+}
+.itensUser h1 {
+  padding: 5px;
+}
+.itensUser:hover{
+background: #d4d4d4;
+}
+.icon_user {
+  background: rgb(206, 206, 206);
+  border-radius: 15%;
+  height: 20px;
+  width: 20px;
+  padding: 3px;
+  margin-right: 10px;
+}
+.icon_user:hover{
+ background: rgb(231, 231, 231);
+}
+#btn_idUser{
+  padding: 0;
+  height: 25px;
+  width: 50px;
+  font-size: 0.8rem;
+  margin-right: 10px;
+}

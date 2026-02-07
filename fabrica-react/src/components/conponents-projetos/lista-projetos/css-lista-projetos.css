@@ -1,0 +1,104 @@
+.listaProjetos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  background: #eeeeee;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listaProjetos h1 {
+  padding: 5px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.projetos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  gap: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 5px;
+  /* width:100%; */
+  margin: 5px;
+}
+
+.projetos img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.descripiton {
+  text-align: left;
+  width: 50%;
+}
+
+.descripiton h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.descripiton h3 {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.descripiton2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.descripiton h2 {
+  font-size: 1.1rem;
+}
+
+.descripiton2 h3 {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #666;
+}
+
+.btnsListaProjetos {}
+
+.BtnListaProjetos {
+  padding: 0;
+  height: 30px;
+  width: 100px;
+  margin: 2px;
+
+}
+
+#btnListaDeletar {
+  background: #e24d4d;
+}
+
+@media(max-width: 480px) {
+  .projetos img {
+    width: 100px;
+    height: 80px;
+  }
+
+  .descripiton h2 {
+    font-size: 0.8rem;
+  }
+
+  .descripiton h3 {
+    font-size: 0.6rem;
+  }
+
+  .descripiton2 h3 {
+    font-size: 0.4rem
+  }
+}

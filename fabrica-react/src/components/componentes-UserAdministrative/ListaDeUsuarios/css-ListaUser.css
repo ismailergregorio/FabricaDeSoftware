@@ -1,0 +1,54 @@
+.listaUser{
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+}
+.haderListaUser{
+ display: flex;
+ flex-direction: row;
+ background: rgb(201, 201, 201);
+ width: 100%;
+ justify-content: space-between;
+ align-items: center;
+ border-radius: 10px;
+}
+
+.haderListaUser h1{
+ margin: 5px 10px;
+ font-size: 0.9rem;
+}
+.addUser{
+ display: flex;
+ flex-direction: row;
+ background: rgb(255, 255, 255);
+ margin: 5px 10px;
+ padding: 5px;
+ border-radius: 25px;
+ align-items: center;
+ justify-content: space-between;
+ width: 110px;
+ padding-left: 5px;
+ padding-right: 10px;
+}
+.btnAdd {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btnAdd h2 {
+  font-size: 0.8rem;
+}
+.btnAdd .icon{
+ padding-right: 15px;
+}
+.icon{
+ border-radius: 10px;
+ height: 20px;
+ width: 20px;
+ padding: 2px;
+}
+.addUser:hover{
+ background: rgb(238, 238, 238);
+}

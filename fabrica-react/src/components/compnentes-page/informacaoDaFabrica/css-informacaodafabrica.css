@@ -1,0 +1,178 @@
+.informacao {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  background-color: #dbdbdb;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+}
+.conteudo-informacao {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin: 10px;
+  width: 100%;
+  /* height: 15rem; */
+  gap: 10px;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+#textSobre {
+  margin: 10px;
+}
+
+.info-text {
+  background: #fff;
+  height: 14rem;
+  padding: 6px;
+  border-radius: 10px;
+}
+.text {
+  width: 100%;
+  text-align: left;
+  color: #333;
+}
+
+.text h1 {
+  font-size: 1.2vw;
+  text-align: justify;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text h2 {
+  font-size: 1.1vw;
+  text-align: justify;
+  margin-bottom: 20px;
+  color: #34495e;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.Img-informacao-fabrica {
+  display: block;
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+.Img-informacao-fabrica img {
+  height: 15rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-atualizar-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  width: 80px;
+  height: 40px;
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  margin-right: 10px;
+}
+
+.btn-atualizar-txt:hover {
+  background-color: #1c5980;
+}
+
+/* Stilo do formulario de envio de texto */
+.formularioDeAtulizacaoDeTexte {
+  display: none;
+}
+.formularioDeTextoInicial {
+  padding: 0;
+  margin: 0;
+}
+#AtualizarText,
+#btn-atualizar-txt,
+#btn-salva-imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 20px;
+  font-size: 0.6rem;
+}
+#btn-salva-imagem {
+  margin-left: 5px;
+}
+
+.btns-infomacao {
+  display: flex;
+  flex-direction: row;
+}
+.EditorDeImagen {
+  display: flex;
+  width: 300px;
+  position: relative;
+  bottom: 50px;
+  left: 10%;
+  height: 0;
+}
+.EditorDeImagen label {
+  font-size: 0.5rem;
+}
+.EditorDeImagen input {
+  height: 20px;
+  margin: 0px;
+  padding: 0px;
+}
+.EditorDeImagen form {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  height: 30px;
+  background: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+#Input_Imagem {
+  padding: 0px;
+  padding-bottom: 2.5px;
+  margin: 0px;
+}
+#FormAtulizarImagen {
+  display: none;
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .informacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .conteudo-informacao {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Img-informacao-fabrica img {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .informacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .conteudo-informacao {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Img-informacao-fabrica img {
+    width: 15rem;
+  }
+}

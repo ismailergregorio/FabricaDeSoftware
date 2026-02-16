@@ -37,8 +37,11 @@ public class SercuirtConfiguration {
         .authorizeHttpRequests(authoriza -> authoriza
             .requestMatchers(HttpMethod.POST, "/auth/**").permitAll()
             .requestMatchers(HttpMethod.POST, "/user").permitAll()
+            .requestMatchers(HttpMethod.GET, "/config/**").permitAll()
+            .requestMatchers(HttpMethod.GET, "/curso/**").permitAll()
+            .requestMatchers(HttpMethod.GET, "/imagemcurso/**").permitAll()
+            .requestMatchers(HttpMethod.GET, "/carrocel/**").permitAll()
             .requestMatchers( "/page/**").permitAll()
-            // .requestMatchers(HttpMethod.GET, "/user").hasAnyRole
             .anyRequest().authenticated())
         .addFilterBefore(sercurityFilter, UsernamePasswordAuthenticationFilter.class)
         .build();

@@ -76,7 +76,6 @@ public class ControllersConfigCarrosel {
         @ApiResponse(responseCode = "500", description = "Erro inesperado do servidor")
     })
     @GetMapping("/carrocel_imagens")
-    @PreAuthorize("hasAnyRole(\"ADMIN\",\"USER_N1\",\"USER_N2\",\"USER\")")
     public List<dtoConfigCarrocelResp> getImagens() {
         List<ClassCarrocel> imagens = repositorioImagens.findAll();
 

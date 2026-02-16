@@ -75,7 +75,6 @@ public class ControllerClassImageCurso {
         @ApiResponse(responseCode = "500", description = "Erro inesperado do servidor")
     })
     @GetMapping("/imagemcurso")
-    @PreAuthorize("hasAnyRole(\"ADMIN\",\"USER_N1\",\"USER_N2\",\"USER\")")
     public List<dtoClassImageCursoResp> listarImagensCursos() {
 
         List<ClassImageCursos> dados = crepositoryImagensCurso.findAll();

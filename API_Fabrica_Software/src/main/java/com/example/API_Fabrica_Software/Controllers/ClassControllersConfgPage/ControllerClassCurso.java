@@ -70,7 +70,6 @@ public class ControllerClassCurso {
         @ApiResponse(responseCode = "500", description = "Erro inesperado do servidor")
     })
     @GetMapping("/curso")
-    @PreAuthorize("hasAnyRole(\"ADMIN\",\"USER_N1\",\"USER_N2\",\"USER\")")
     public List<dtoClassCursoResp> listarCursos() {
 
         List<ClassCursos> dados = repositoryCurso.findAll();

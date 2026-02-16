@@ -44,7 +44,6 @@ public class ControllerClassConfigSite {
       @ApiResponse(responseCode = "403", description = "Acesso não autorizado"),
       @ApiResponse(responseCode = "500", description = "Erro inesperado do servidor")
   })
-  @PreAuthorize("hasAnyRole(\"ADMIN\",\"USER_N1\",\"USER_N2\",\"USER\")")
   @GetMapping("/config")
   public List<dtoClassConfgSiteResp> getConfigSite() {
     List<ClassConfigSite> itens = repositoryConfigSite.findAll();

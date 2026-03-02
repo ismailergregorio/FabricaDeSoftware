@@ -55,6 +55,7 @@ C:\Users\ismailer.junior\Documents\GitHub\FabricaDeSoftware\API_Fabrica_Software
 C:\Users\ismailer.junior\Documents\GitHub\FabricaDeSoftware\API_Fabrica_Software\src\main\java\com\example\API_Fabrica_Software\Exception\ApiError.java
 C:\Users\ismailer.junior\Documents\GitHub\FabricaDeSoftware\API_Fabrica_Software\src\main\java\com\example\API_Fabrica_Software\Repository\RepositoryGestores.java
 C:\Users\ismailer.junior\Documents\GitHub\FabricaDeSoftware\API_Fabrica_Software\src\main\java\com\example\API_Fabrica_Software\Controllers\ControllersAuth.java
+C:\Users\ismailer.junior\Documents\GitHub\FabricaDeSoftware\API_Fabrica_Software\src\main\java\com\example\API_Fabrica_Software\DTO\RetornoDTOpeges\RetornoGestorDTOsimples.java
 C:\Users\ismailer.junior\Documents\GitHub\FabricaDeSoftware\API_Fabrica_Software\src\main\java\com\example\API_Fabrica_Software\DTO\UsersDTO\updateUsuarioDTO.java
 C:\Users\ismailer.junior\Documents\GitHub\FabricaDeSoftware\API_Fabrica_Software\src\main\java\com\example\API_Fabrica_Software\Repository\RepositoryConfgSite\RepositoryConfigSite.java
 C:\Users\ismailer.junior\Documents\GitHub\FabricaDeSoftware\API_Fabrica_Software\src\main\java\com\example\API_Fabrica_Software\Exception\SenhaInvalidaException.java

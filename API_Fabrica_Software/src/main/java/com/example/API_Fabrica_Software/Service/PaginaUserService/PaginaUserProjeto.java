@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.API_Fabrica_Software.DTO.RetornoDTOpeges.RetornoAlunosDTO;
+import com.example.API_Fabrica_Software.DTO.RetornoDTOpeges.RetornoGestorDTOsimples;
 import com.example.API_Fabrica_Software.DTO.RetornoDTOpeges.RetornoProjetosDTO;
 import com.example.API_Fabrica_Software.Model.ClassProjetos;
 import com.example.API_Fabrica_Software.Repository.RepositoryProjetos;
@@ -31,7 +32,9 @@ public class PaginaUserProjeto {
                         aluno.getEmailInstitucional(),
                         aluno.getProjetoSelecionado().getCodigoProjeto(),
                         aluno.getCurso())).toList(),
-                projeto.getProfesorOrientador().stream().map(gestor -> gestor.getCodigoGestor()).toList(),
+                projeto.getProfesorOrientador().stream()
+                        .map(gestor -> new RetornoGestorDTOsimples(gestor.getCodigoGestor(), gestor.getName()))
+                        .toList(),
                 projeto.getLinkGit(),
                 projeto.getLinkImage())).toList();
 
@@ -54,7 +57,9 @@ public class PaginaUserProjeto {
                             aluno.getEmailInstitucional(),
                             aluno.getProjetoSelecionado().getCodigoProjeto(),
                             aluno.getCurso())).toList(),
-                    projeto.getProfesorOrientador().stream().map(gestor -> gestor.getCodigoGestor()).toList(),
+                    projeto.getProfesorOrientador().stream()
+                            .map(gestor -> new RetornoGestorDTOsimples(gestor.getCodigoGestor(), gestor.getName()))
+                            .toList(),
                     projeto.getLinkGit(),
                     projeto.getLinkImage());
         }

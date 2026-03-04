@@ -1,36 +1,35 @@
-// Seleciona o form pelo ID
-const form = document.getElementById('cadastro-form');
+document.getElementById("cadastro-form")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault(); // evita recarregar a página
+    const formData = new FormData(this);
 
-  // Monta o objeto a partir dos campos do form
-  const data = {
-    first_name: form.first_name.value.trim(),
-    last_name:  form.last_name.value.trim(),
-    email:      form.email.value.trim(),
-    periodo:    form.periodo.value.trim(),
-    matricula:  form.matricula.value.trim()
-  };
+    const dados = {
+      nome: formData.get("nome"),
+      ra: formData.get("ra"),
+      emailInstitucional: formData.get("emailInstitucional"),
+      curso: formData.get("curso"),
+      motivo: formData.get("motivo")
+    };
 
-  try {
-    const response = await fetch('/admin', {     // ou sua rota de API
-      method:  'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
+    try {
+      const res = await fetch("http://localhost:8080/email/inscricao", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dados)
+      });
 
-    if (!response.ok) {
-      throw new Error(`Erro ${response.status}`);
+      if (res.ok) {
+        alert("Inscrição enviada com sucesso!");
+        this.reset();
+      } else {
+        alert("Erro ao enviar inscrição.");
+      }
+
+    } catch (err) {
+      console.error(err);
+      alert("Erro de conexão com o servidor.");
     }
-
-    alert('Cadastro enviado com sucesso!');
-    form.reset();
-
-  } catch (err) {
-    console.error('Falha no cadastro:', err);
-    alert('Não foi possível enviar. Tente novamente.');
-  }
 });

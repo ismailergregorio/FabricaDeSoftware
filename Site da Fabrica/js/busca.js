@@ -6,11 +6,17 @@ export function inicializarBusca(inputId, suggestionsId) {
 
   let projetos = [];
 
-  // Busca os projetos da API
-  fetch('http://localhost:8080/projetos/getprojetos')
-    .then(res => res.json())
+  // Busca os projetos da API 
+  fetch("http://localhost:8080/page/projetos")
+    .then(res => {
+      if (!res.ok) {
+        throw new Error("Erro HTTP: " + res.status);
+      }
+      return res.json();
+    })
     .then(data => {
       projetos = data;
+      console.log("Projetos carregados:", projetos);
     })
     .catch(err => console.error("Erro ao buscar projetos:", err));
 
@@ -40,7 +46,8 @@ export function inicializarBusca(inputId, suggestionsId) {
       });
       suggestionsBox.classList.remove('hidden');
     } else {
-      suggestionsBox.innerHTML = '<div class="px-2 py-1 text-gray-500">Nenhum resultado encontrado</div>';
+      suggestionsBox.innerHTML =
+        '<div class="px-2 py-1 text-gray-500">Nenhum resultado encontrado</div>';
       suggestionsBox.classList.remove('hidden');
     }
   });

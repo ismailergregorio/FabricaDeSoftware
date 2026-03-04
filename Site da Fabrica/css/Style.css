@@ -161,3 +161,64 @@ body {
 #suggestions div:hover {
   background-color: #f1f1f1;
 }
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 992px) {
+
+  .cadastro-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cadastro-image img {
+    max-width: 100%;
+  }
+
+  .cadastro-form {
+    max-width: 100%;
+    padding: 30px;
+  }
+
+}
+/* SOBRE - Mobile */
+@media (max-width: 768px) {
+
+  #sobre-container .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #sobre-container img {
+    display: block;
+    margin: 20px auto 0 auto;
+    max-width: 85%;
+    height: auto;
+  }
+
+}
+/* CARROSSEL - Mobile */
+@media (max-width: 768px) {
+
+  #carouselExampleIndicators {
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  #carouselExampleIndicators img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+}
+/* NAVBAR - Mobile */
+@media (max-width: 768px) {
+
+  nav span {
+    font-size: 16px !important;
+  }
+
+  nav img {
+    height: 50px !important;
+  }
+
+}

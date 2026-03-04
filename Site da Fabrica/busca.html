@@ -13,6 +13,12 @@
       width: 100%;
       border: 1px solid #ccc;
       border-radius: 4px;
+
+    }
+    .projeto-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
     }
   </style>
 
@@ -57,7 +63,7 @@
 
       if (!termo) return;
 
-      fetch("http://localhost:8080/projetos/getprojetos")
+      fetch("http://localhost:8080/page/projetos")
         .then(res => res.json())
         .then(projetos => {
           const resultados = projetos.filter(p =>
@@ -68,25 +74,72 @@
           container.innerHTML = "";
 
           if (resultados.length > 0) {
-            resultados.forEach(projeto => {
-              const card = document.createElement("div");
-              card.className = "card mb-3";
-              card.innerHTML = `
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="${projeto.linkImage}" class="img-fluid rounded-start" alt="${projeto.nomeDoProjeto}">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">${projeto.nomeDoProjeto}</h5>
-                      <p class="card-text">${projeto.descricaoDoProjeto}</p>
-                      ${projeto.linkGit ? `<a href="${projeto.linkGit}" target="_blank" class="btn btn-primary">Repositório GitHub</a>` : ""}
-                    </div>
-                  </div>
-                </div>
-              `;
-              container.appendChild(card);
-            });
+           resultados.forEach(projeto => {
+
+  // 🔹 Lista de alunos
+  const alunos = projeto.alunosParticipantesDoProjeto?.length
+    ? projeto.alunosParticipantesDoProjeto
+        .map(a => `<li>${a.nome} (${a.curso})</li>`)
+        .join("")
+    : "<li>Nenhum aluno cadastrado</li>";
+
+  // 🔹 Lista de professores orientadores
+  const professores = projeto.profesorOrientador?.length
+  ? projeto.profesorOrientador
+      .map(p => `<li>${p.name}</li>`)
+      .join("")
+  : "<li>Não informado</li>";
+
+  const card = document.createElement("div");
+  card.className = "card mb-4 shadow-sm";
+
+  card.innerHTML = `
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="${projeto.linkImage || './img/default.jpg'}"
+             class="img-fluid rounded-start"
+             class="img-fluid rounded-start projeto-img"
+             alt="${projeto.nomeDoProjeto}">
+      </div>
+
+      <div class="col-md-8">
+        <div class="card-body">
+
+          <h4 class="card-title">${projeto.nomeDoProjeto}</h4>
+
+          <p class="text-muted mb-2">
+            <strong>Área:</strong> ${projeto.areaDeConhecimento}
+          </p>
+
+          <p class="card-text">
+            ${projeto.descricaoDoProjeto}
+          </p>
+
+          <hr>
+
+          <h6>👨‍🎓 Alunos Participantes</h6>
+          <ul>
+            ${alunos}
+          </ul>
+
+          <h6>👨‍🏫 Professores Orientadores</h6>
+          <ul>
+            ${professores}
+          </ul>
+
+          ${projeto.linkGit 
+            ? `<a href="${projeto.linkGit}" target="_blank" class="btn btn-dark mt-2">
+                 Ver no GitHub
+               </a>` 
+            : ""}
+
+        </div>
+      </div>
+    </div>
+  `;
+
+  container.appendChild(card);
+});
           } else {
             container.innerHTML = `<p class="text-muted">Nenhum resultado encontrado para <strong>${termo}</strong>.</p>`;
           }
@@ -94,51 +147,6 @@
         .catch(err => console.error("Erro ao buscar projetos:", err));
     });
   </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const params = new URLSearchParams(window.location.search);
-      const termo = params.get("q");
-
-      if (!termo) return;
-
-      fetch("http://localhost:8080/projetos/getprojetos")
-        .then(res => res.json())
-        .then(projetos => {
-          const resultados = projetos.filter(p =>
-            p.nomeDoProjeto.toLowerCase().includes(termo.toLowerCase())
-          );
-
-          const container = document.getElementById("resultados");
-          container.innerHTML = "";
-
-          
-
-          if (resultados.length > 0) {
-            resultados.forEach(projeto => {
-              const card = document.createElement("div");
-              card.className = "card mb-3";
-              card.innerHTML = `
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="${projeto.linkImage}" class="img-fluid rounded-start" alt="${projeto.nomeDoProjeto}">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">${projeto.nomeDoProjeto}</h5>
-                      <p class="card-text">${projeto.descricaoDoProjeto}</p>
-                      ${projeto.linkGit ? `<a href="${projeto.linkGit}" target="_blank" class="btn btn-primary">Repositório GitHub</a>` : ""}
-                    </div>
-                  </div>
-                </div>
-              `;
-              container.appendChild(card);
-            });
-          } else {
-            container.innerHTML = `<p class="text-muted">Nenhum resultado encontrado para <strong>${termo}</strong>.</p>`;
-          }
-        })
-        .catch(err => console.error("Erro ao buscar projetos:", err));
-    });
-  </script>
+ 
 </body>
 </html>

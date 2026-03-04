@@ -2,40 +2,45 @@ export async function carregarSobre() {
   try {
     const res = await fetch("http://localhost:8080/config/config");
     const data = await res.json();
-    console.log(data);
+
+    console.log("Configurações recebidas:", data);
+
     const container = document.getElementById("sobre-container");
 
-    let codigo_titulo = "";
-    let codigo_descricao = "";
-    let codigo_imagem = "";
-    let codigo_alt = "";
+    let imagem = "";
+    let descricao = `
+      A Fábrica de Software é um projeto acadêmico voltado para o desenvolvimento 
+      prático de soluções tecnológicas, promovendo a integração entre teoria e prática,
+      preparando os alunos para o mercado de trabalho.
+    `;
 
-    data.forEach((config, index) => {
-      if (config.codigoDaConfguracao === "CONF2883") {
-        codigo_titulo = config.valorSalvo
-      }
-      if (config.codigoDaConfguracao == "CONF4868") {
-        codigo_descricao = config.valorSalvo
-      }
-      if (config.codigoDaConfguracao == "CONF6714") {
-        codigo_imagem = config.valorSalvo
-        console.log(codigo_imagem);
-
-      }
-      if (config.codigoDaConfguracao == "CONF6714") {
-        codigo_alt = config.nomeConfig
+    data.forEach(config => {
+      if (config.codigoDaConfguracao === "CONF2955") {
+        imagem = config.valorSalvo;
       }
     });
-    
+
     container.innerHTML = `
-      <h2 class="mb-4">Fábrica de Software – Projeto Acadêmico </h2>
-      <div class="row align-items-center">
-        <div class="col-md-6"><p>${codigo_descricao}</p></div>
-        <div class="col-md-6 text-center">
-          <img src="${codigo_imagem}" alt="${codigo_alt}" class="img-fluid rounded shadow" style="width: 400px; height: 300px; position: relative; left: 100px;">
-        </div>
-      </div>
-    `;
+  <h2 class="mb-4">Fábrica de Software – Projeto Acadêmico</h2>
+
+  <div class="row align-items-center">
+
+    <div class="col-md-6">
+      <p style="font-size: 18px; line-height: 1.6;">
+        ${descricao}
+      </p>
+    </div>
+
+    <div class="col-md-6 d-flex justify-content-end">
+      <img src="${imagem}" 
+           alt="Imagem da Fábrica de Software"
+           class="img-fluid rounded shadow"
+           style="max-width: 75%; height: auto;">
+    </div>
+
+  </div>
+`;
+
   } catch (err) {
     console.error("Erro ao carregar conteúdo da seção Sobre:", err);
   }

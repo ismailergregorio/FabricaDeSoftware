@@ -84,7 +84,7 @@ async function carregarSobre() {
 // 5) Carregar projetos da API
 async function carregarProjetos() {
   try {
-    const res = await fetch('http://localhost:8080/projetos/getprojetos');
+    const res = await fetch('http://localhost:8080/page/projetos');
     const dados = await res.json();
     const cont = document.getElementById('project-carousel');
     cont.innerHTML = '';

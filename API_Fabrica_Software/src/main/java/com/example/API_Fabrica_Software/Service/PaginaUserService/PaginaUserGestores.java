@@ -52,7 +52,9 @@ public class PaginaUserGestores {
 
                                                                                 projeto.getLinkGit(),
                                                                                 projeto.getLinkImage()))
-                                                                .toList()))
+                                                                .toList(),
+                                                gestor.getLinkImagenGestor()))
+
                                 .toList();
 
                 System.out.println(dados);
@@ -93,7 +95,8 @@ public class PaginaUserGestores {
 
                                                                         projeto.getLinkGit(),
                                                                         projeto.getLinkImage()))
-                                                        .toList());
+                                                        .toList(),
+                                        gestor.getLinkImagenGestor());
                 }
                 return null;
         }

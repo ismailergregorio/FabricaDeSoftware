@@ -14,8 +14,19 @@ export async function carregarSobre() {
       preparando os alunos para o mercado de trabalho.
     `;
 
+    // data.forEach(config => {
+    //   if (config.nomeConfig === "Configuracao Texto Inicial") {
+    //     descricao = config.valorSalvo;
+    //   }
+    // });
+
     data.forEach(config => {
-      if (config.codigoDaConfguracao === "CONF2955") {
+
+      if (config.nomeConfig === "Configuracao Texto Inicial") {
+        descricao = config.valorSalvo;
+      }
+
+      if (config.nomeConfig === "Configuracao Imagem Inicial") {
         imagem = config.valorSalvo;
       }
     });

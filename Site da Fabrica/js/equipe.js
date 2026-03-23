@@ -15,9 +15,7 @@ export async function carregarEquipe() {
       // 🔥 Pega imagem do primeiro projeto, se existir
       let imagem = "./img/default.jpg";
 
-      if (m.projetos && m.projetos.length > 0) {
-        imagem = m.projetos[0].linkImage || "./img/default.jpg";
-      }
+      imagem = m.img || "./img/default.jpg";
 
       div.innerHTML = `
         <img src="${imagem}" alt="${m.name}"
